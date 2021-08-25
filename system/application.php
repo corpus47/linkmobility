@@ -32,14 +32,14 @@ class Application {
 		$this->params["theme_path"] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'theme' . DIRECTORY_SEPARATOR;
 		$this->params['view_path'] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'views' . DIRECTORY_SEPARATOR;
 		
-		$this->params["qr_path"] = str_replace('system','',dirname(__FILE__)) . 'qrcodes' . DIRECTORY_SEPARATOR;
+		/*$this->params["qr_path"] = str_replace('system','',dirname(__FILE__)) . 'qrcodes' . DIRECTORY_SEPARATOR;
 		$this->params["qr_uri"] = ROOT_URL . "/qrcodes/";
 		
 		$this->params["pdf_path"] = str_replace('system','',dirname(__FILE__)) . 'pdfs' . DIRECTORY_SEPARATOR;
 		$this->params["pdf_uri"] = ROOT_URL . "/pdfs/";
 		
 		$this->params["uploads_path"] = str_replace('system','',dirname(__FILE__)) . 'uploads' . DIRECTORY_SEPARATOR;
-		$this->params["uploads_uri"] = ROOT_URL . "/uploads/";
+		$this->params["uploads_uri"] = ROOT_URL . "/uploads/";*/
 		
 		//$_SESSION['pdf_path'] = $this->params['pdf_path'];
 		//$_SESSION['pdf_uri'] = $this->params['pdf_uri'];
@@ -74,6 +74,7 @@ class Application {
 	private function load_module($module_name) {
 		if(!file_exists($this->params["module_path"].$module_name.'.module.php')) {
 			die("Hiányzó modul: ".$module_name);
+			exit;
 		} else {
 			require_once($this->params["module_path"].$module_name.'.module.php');
 			$this->module = new $module_name($this->params);

@@ -16,52 +16,26 @@ if($_SERVER['HTTP_HOST'] === 'localhost') {
 	define('DB_HOST','localhost');
 	define('DB_USER','root');
 	define('DB_PASSWORD','sc1959op');
-	define('DB_NAME','hdt');
+	define('DB_NAME','linkmo');
 
-	define('PARCEL_DB_HOST','localhost');
-	define('PARCEL_DB_USER','root');
-	define('PARCEL_DB_PASSWORD','sc1959op');
-	define('PARCEL_DB_NAME','parceldev');
-
-} elseif($_SERVER['HTTP_HOST'] === '195.228.35.4') { 
+} elseif($_SERVER['HTTP_HOST'] === 'linkmob.wpolabor.hu') { 
 
 	define('DB_HOST','localhost');
-	define('DB_USER','root');
-	define('DB_PASSWORD','sc1959op');
-	define('DB_NAME','hdt');
-	
-	define('PARCEL_DB_HOST','localhost');
-	define('PARCEL_DB_USER','root');
-	define('PARCEL_DB_PASSWORD','sc1959op');
-	define('PARCEL_DB_NAME','parceldev');
-	
-} else {
-	
-	define('DB_HOST','localhost');
-	define('DB_USER','root');
-	define('DB_PASSWORD','sc1959op');
-	define('DB_NAME','hdt');
-	
-	define('PARCEL_DB_HOST','localhost');
-	define('PARCEL_DB_USER','root');
-	define('PARCEL_DB_PASSWORD','sc1959op');
-	define('PARCEL_DB_NAME','parceldev');
+	define('DB_USER','');
+	define('DB_PASSWORD','');
+	define('DB_NAME','linkmob');
 	
 }
 
 // User levels
 
 define('ADMIN',0);
-define('PARTNER_ADMIN',1);
-define('EDITOR',2);
-define('MASTER',3);
-define('IMPORT',4);
-define('EXPORT',5);
+define('EDITOR',1);
 
 // Rules template
 
 $rules = array(
-			'masterservice' => array(
+			'linkmobility' => array(
 									'listusers' => '',
 								),
 		);
