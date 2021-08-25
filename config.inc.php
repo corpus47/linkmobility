@@ -11,14 +11,14 @@ define("THEME","default");
 
 // Databases
 
-if($_SERVER['HTTP_HOST'] === 'localhost') {
+if($_SERVER['HTTP_HOST'] === 'linkmobility.test') {
 	
 	define('DB_HOST','localhost');
 	define('DB_USER','root');
 	define('DB_PASSWORD','sc1959op');
-	define('DB_NAME','linkmo');
+	define('DB_NAME','linkmob');
 
-} elseif($_SERVER['HTTP_HOST'] === 'linkmob.wpolabor.hu') { 
+} elseif($_SERVER['HTTP_HOST'] === 'linkmob.wplabor.hu') { 
 
 	define('DB_HOST','localhost');
 	define('DB_USER','');
