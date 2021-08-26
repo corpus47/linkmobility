@@ -16,16 +16,16 @@ class Application {
 		if(isset($_GET['logout'])) {
 			//session_destroy();
 			$this->kill_session();
-			header('Location: http://'.ROOT_URL);
+			header('Location: http://' . ROOT_URL);
 			exit;
 		}
 		
 		if(!isset($_GET['m'])) {
-			header('Location: http://' . ROOT_URL . '?m='.DEFAULT_MODULE);
+			header('Location: http://' . ROOT_URL . '?m=' . DEFAULT_MODULE);
 			exit;
 		}
 		
-		$this->params["module_path"] = dirname(__FILE__).DIRECTORY_SEPARATOR;
+		$this->params["module_path"] = dirname(__FILE__) . DIRECTORY_SEPARATOR;
 		
 		$this->params["theme_path"] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'theme' . DIRECTORY_SEPARATOR;
 		$this->params['view_path'] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'views' . DIRECTORY_SEPARATOR;

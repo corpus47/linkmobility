@@ -23,26 +23,12 @@
 						unset($_SESSION["HDT_login_error"]);
 					}
 				?>
-				<!--<div class="form-group">
-					<select name="login-type" class="form-control ch_mark theme-select">
-                        <option value="">Váltson témát - jelenleg ( <?php echo $_SESSION['HDT_theme']?> )</option>
-                        <option value="default">Régi (MISI)</option>
-						<option value="new">Új téma</option>
-					</select>
-				</div>-->
-				<!--<div class="form-group">
-					<select name="login-type" class="form-control ch_mark login-type">
-                        <option value="0">Mesterszolgáltatás felhasználó</option>
-                        <option value="1">HDT felhasználó, partner</option>
-						<option value="2">Mester belépés</option>
-					</select>
-				</div>-->
 				<input type="hidden" name="login-type" value="0" />
 				<button class="btn btn-primary btn-block" name="signin" type="submit">Belépés</button>                                        	
 			</form>
 			<div class="sp"></div>                    
 			<div class="sp"></div>
-			<div class="pull-left" style="text-align:center">
+			<div class="pull-center">
 				© All Rights Reserved <b>cOrpus</b> 2021
 			</div>
 		</div>

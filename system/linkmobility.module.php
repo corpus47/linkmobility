@@ -93,8 +93,6 @@ class linkmobility {
 	
 	public function __construct($params = NULL,$ajaxcall = NULL) {
 		
-		//$this->open_db();
-		
 		$this->ajax_url = 'http://' . ROOT_URL . '/system/' . MODULE_NAME . '.ajax.php';
 		
 		if($params != NULL) {
@@ -105,102 +103,7 @@ class linkmobility {
 		
 		$this->user = new user($this);
 		
-		/*$this->profil = new profil($this);
-		
-		$this->parcel = new parcel($this);
-		
-		$this->subcontactor = new subcontactor($this);
-		
-		$this->master = new master($this);
-		
-		$this->order = new order();
-		
-		$this->cities = new cities();
-		
-		$this->installations = new installations($this);
-		
-		$this->mandates = new mandates($this);
-		
-		$this->clientoptions = new clientoptions($this);
-		
-		$this->mandates_options = new mandates_options($this);
-		
-		$this->pg_installation = new pg_installation();
-		
-		$this->statuses = new statuses();
-		
-		$this->google = new Google_tools();
-		
-		$this->qrcode = new Qrcode_tool($this);
-		
-		$this->pdf = new Pdf_tool($this);
-		
-		$this->email = new Email($this);
-		
-		$this->statushistory = new statushistory($this);
-		
-		$this->clients = new clients($this);
-		
-		$this->subclients = new subclients($this);
-		
-		$this->sms = new Sms($this);
-		
-		$this->mandate_tracking = new mandate_tracking($this);
-		
-		$this->days = new days($this);
-		
-		$this->uploadfiles = new uploadfiles($this);
-		
-		$this->email_contents = new email_contents($this);*/
-		
 		$this->user_logged = new user_logged($this);
-		
-		/*$this->reports = new reports($this);
-		
-		$this->converter = new Azaz();
-		
-		$this->compactmandatelist = new CompactMandateList($this);*/
-		
-		/*if(isset($_POST['username']) && isset($_POST['password'])) {
-			$user_id = $this->user->login($_POST['username'],$_POST['password']);
-
-			if($user_id !== false){
-				$_SESSION['HDT_uid'] = $user_id;
-				header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-				exit;
-			}
-		}*/
-		
-		// A sessionban benne van az uid
-		
-		/*if(isset($_SESSION['uid'])) {
-			$id = $this->parcel->login('','',$_SESSION['uid'],true);
-			if($id != false){
-				$_SESSION['HDT_uid'] = $id;
-				//header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-				//exit;
-			}
-		}*/
-		
-		// Éles parcel a sessionben r_user_id
-		
-		/*if(isset($_SESSION['r_user_id'])) {
-			$id = $this->parcel->login('','',$_SESSION['r_user_id'],true);
-			if($id != false){
-				$_SESSION['HDT_uid'] = $id;
-				//header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-				//exit;
-			}
-		}*/
-		
-		/*if(isset($_POST['username']) && isset($_POST['password'])) {
-			$id = $this->parcel->login($_POST['username'],$_POST['password']);
-			if($id != false){
-				$_SESSION['HDT_uid'] = $id;
-				header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-				exit;
-			}
-		}*/
 		
 		// Tracking login
 		
@@ -220,48 +123,7 @@ class linkmobility {
 					
 					$_SESSION['HDT_uid'] = $id;
 					
-					header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-					exit;
-				}
-			} elseif((int)$_POST['login-type'] === 1) {
-				
-				if(isset($_SESSION['HDT_parcel_user'])) {
-					unset($_SESSION['HDT_parcel_user']);
-				}
-				
-				$id = $this->parcel->login($_POST['username'],$_POST['password']);
-				//var_dump($_SESSION);
-				//var_dump($id);exit;
-				
-				if($id != false) {
-				
-					// HDT felhasználó belépés
-					
-					$_SESSION['HDT_uid'] = $id;
-					
-					$_SESSION['HDT_parcel_user'] = $id;
-					
-					header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-					exit;
-				}
-				
-			} elseif((int)$_POST['login-type'] === 2) {
-			
-				$id = $this->master->login($_POST['username'],$_POST['password']);
-				//echo 'Mester';exit;
-				if($id != false) {
-				
-					// Mester belépés
-					
-					if(isset($_SESSION['HDT_parcel_user'])) {
-						unset($_SESSION['HDT_parcel_user']);
-					}
-					
-					$_SESSION['HDT_uid'] = $id;
-					
-					$_SERVER['REQUEST_URI'] .= "&act=master";
-					
-					header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+					header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 					exit;
 				}
 			}

@@ -122,7 +122,7 @@
 			<?php if(isset($_SESSION["HDT_uid"])):?>
 			var uid = <?php echo $_SESSION["HDT_uid"];?>;
 			<?php endif;?>
-			var module = <?php echo DEFAULT_MODULE; ?>;	
+			var module = '<?php echo DEFAULT_MODULE; ?>';	
 		</script>
 		<?php echo $this->js_to_view(); ?>
 	</body>
