@@ -4,8 +4,7 @@
 	<div class="block-login">
 		
 		<div class="block-login-content">
-			<!--<div class="block-login-logo"></div>-->
-			<h1><center><strong>Link Mobility próbafeladat</strong></center></h1>
+			<div class="pull-center"><h1>Link Mobility próbafeladat</h1></div>
 			<h2>Belépés</h2>					
 			<form id="signinForm" method="post" action="http://<?php echo $_SERVER['HTTP_HOST'],$_SERVER['REQUEST_URI'];?>">
 				<!--<div class="master-login-instruction" style="display:none;">
