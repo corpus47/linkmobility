@@ -3,63 +3,11 @@ require_once('userlevels.inc.php');
 
 require_once('users.component.php');
 
-/*require_once('profil.component.php');
-
-require_once('subcontactor.component.php');
-
-require_once('master.component.php');
-
-require_once('parcel.component.php');
-
-require_once('order.component.php');
-
-require_once('cities.component.php');
-
-require_once('installations.component.php');
-
-require_once('mandates.component.php');
-
-require_once('clientoptions.component.php');
-
-require_once('mandates_options.component.php');
-
-require_once('pg_installation.component.php');
-
-require_once('statuses.component.php');
-
-require_once('google.component.php');
-
-require_once('qrcode.component.php');
-
-require_once('pdf.component.php');
-
-require_once('mail.component.php');
-
-require_once('statushistory.component.php');
-
-require_once('clients.component.php');
-
-require_once('subclients.component.php');
-
-require_once('sms.component.php');
-
-require_once('mandate_tracking.component.php');
-
-require_once('days.component.php');
-
-require_once('uploadfiles.component.php');
-
-require_once('email_contents.component.php');*/
+require_once('profil.component.php');
 
 require_once('user_logged.component.php');
 
-/*require_once('reports.component.php');*/
-
 require_once('DbEngines/sys.db.php');
-
-/*require_once('tools/szam_tostring/szam_tostring.php');
-
-require_once('tools/CompactMandateList/compactmandatelist.php');*/
 
 define('MODULE_NAME','linkmobility');
 

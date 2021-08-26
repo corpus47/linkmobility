@@ -79,12 +79,12 @@ if(!$lock && $user['Locked'] != $_SESSION["HDT_uid"]) {
 							</div>
 							
 							<?php 
-							var_dump($user);
-								if($user['List_style'] == 1) {
+							//var_dump($user);
+								/*if($user['List_style'] == 1) {
 									$checked = 'checked = "checked" ';
 								} else {
 									$checked = '';
-								}
+								}*/
 							?>
 							
 							<div class="form-group form-float">

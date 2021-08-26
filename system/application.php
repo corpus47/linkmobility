@@ -1,7 +1,5 @@
 <?php
 
-require_once('DbEngines/sys.db.php');
-
 class Application {
 	
 	private $module = NULL;
@@ -28,21 +26,9 @@ class Application {
 		}
 		
 		$this->params["module_path"] = dirname(__FILE__).DIRECTORY_SEPARATOR;
-		//$this->params['theme_path'] = str_replace('system','',dirname(__FILE__));
+		
 		$this->params["theme_path"] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'theme' . DIRECTORY_SEPARATOR;
 		$this->params['view_path'] = str_replace('system','',dirname(__FILE__)) . 'templates' . DIRECTORY_SEPARATOR . $_SESSION['HDT_theme'] . DIRECTORY_SEPARATOR .'views' . DIRECTORY_SEPARATOR;
-		
-		/*$this->params["qr_path"] = str_replace('system','',dirname(__FILE__)) . 'qrcodes' . DIRECTORY_SEPARATOR;
-		$this->params["qr_uri"] = ROOT_URL . "/qrcodes/";
-		
-		$this->params["pdf_path"] = str_replace('system','',dirname(__FILE__)) . 'pdfs' . DIRECTORY_SEPARATOR;
-		$this->params["pdf_uri"] = ROOT_URL . "/pdfs/";
-		
-		$this->params["uploads_path"] = str_replace('system','',dirname(__FILE__)) . 'uploads' . DIRECTORY_SEPARATOR;
-		$this->params["uploads_uri"] = ROOT_URL . "/uploads/";*/
-		
-		//$_SESSION['pdf_path'] = $this->params['pdf_path'];
-		//$_SESSION['pdf_uri'] = $this->params['pdf_uri'];
 		
 		$this->params["theme_uri"] = ROOT_URL . "/templates/" . $_SESSION['HDT_theme'] . "/theme/";
 		
