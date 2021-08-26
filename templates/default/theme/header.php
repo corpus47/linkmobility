@@ -101,7 +101,7 @@
 	}
 	?>
 	<body class="<?php echo $body_class?>">
-	<?php //var_dump($_SESSION);?>
+	<?php var_dump($_SESSION);?>
 		<!-- fileupload loader -->
 		<div id="fileupload-loader"></div>
 		<div id="anicircle-loader"></div>

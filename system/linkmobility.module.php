@@ -7,11 +7,15 @@ require_once('profil.component.php');
 
 require_once('user_logged.component.php');
 
+require_once('mail.component.php');
+
 require_once('DbEngines/sys.db.php');
 
 define('MODULE_NAME','linkmobility');
 
 class linkmobility {
+
+	public $module_name = MODULE_NAME;
 	
 	public $params;
 	
@@ -104,6 +108,8 @@ class linkmobility {
 		$this->user = new user($this);
 		
 		$this->user_logged = new user_logged($this);
+
+		$this->email = new Email($this);
 		
 		// Tracking login
 		

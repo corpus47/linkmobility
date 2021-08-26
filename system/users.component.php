@@ -440,7 +440,7 @@ class user {
 		
 		$result = $this->user_db->list_users($filter);
 		
-		while($row = mysql_fetch_assoc($result)) {
+		while($row = mysqli_fetch_assoc($result)) {
 
 			if($act_userid == $row['ID']){
 				$selected = 'selected';
@@ -471,7 +471,7 @@ class user {
 			return false;	
 		} else {
 			// E-mail küldése
-			$this->parent->get_component('clients')->set_owner($inserted,true);
+			//$this->parent->get_component('clients')->set_owner($inserted,true);
 			$email = $this->parent->get_component('email')->user_register_email($inserted);
 			$_SESSION['HDT_ok_message'] = "Sikeres felhasználó felvitel!";
 			return true;

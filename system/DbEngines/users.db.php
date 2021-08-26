@@ -259,7 +259,7 @@ class UsersDB {
 				$inserted['user-list_style'] = 0;
 			}
 			//var_dump($inserted);
-			$sql = "INSERT INTO sys_users (
+			$sql = "INSERT INTO " . $this->table_name . " (
 										Login,
 										Pwd,
 										Salt,
@@ -295,7 +295,7 @@ class UsersDB {
 			
 			//var_export($sql);
 			
-			$ret =  mysqli_query($this->connection,$sql) or die (mysqli_error());
+			$ret =  mysqli_query($this->connection,$sql) or die (mysqli_error($this->connection));
 		
 			$this->close_db();
 		

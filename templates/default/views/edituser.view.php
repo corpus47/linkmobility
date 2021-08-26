@@ -110,7 +110,7 @@ if(!$lock && $user['Locked'] != $_SESSION["HDT_uid"]) {
 										<?php else:?>
 										<option value="-1">Adminisztrátori jogkör megszüntetése</option>
 										<?php endif;?>
-										<?php echo $this->clients->clients_select($own);?>
+										<?php //echo $this->clients->clients_select($own);?>
 									</select>
 								</div>
 							</div>
